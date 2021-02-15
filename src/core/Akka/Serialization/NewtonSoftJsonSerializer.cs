@@ -165,7 +165,7 @@ namespace Akka.Serialization
                     ? TypeNameHandling.All 
                     : TypeNameHandling.None,
                 ContractResolver = new AkkaContractResolver(),
-                Error = (serializer,err) => err.ErrorContext.Handled = true;
+                Error = (serializer,err) => err.ErrorContext.Handled = true
             };
 
             _serializer = JsonSerializer.Create(Settings);
